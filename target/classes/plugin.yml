@@ -1,0 +1,23 @@
+name: Reingekekst
+version: 1.0
+api-version: 1.21
+main: net.lostteku.Reingekekst
+commands:
+  slap:
+    permission: op
+    usage: '/slap <spieler>'
+  tnt:
+    permission: op
+    usage: '/tnt <spieler>'
+  fire:
+    permission: op
+    usage: '/fire <spieler> <dauer in sekunden>'
+  freeze:
+    permission: op
+    usage: '/freeze <spieler>'
+  starve:
+    permission: op
+    usage: '/starve <spieler>'
+  nofood:
+    permission: op
+    usage: '/nofood <spieler>'

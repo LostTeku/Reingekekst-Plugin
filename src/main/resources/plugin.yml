@@ -1,0 +1,20 @@
+name: Reingekekst
+version: 1.0
+api-version: 1.21
+main: net.lostteku.Reingekekst
+commands:
+  tnt:
+    permission: keks.tnt
+    usage: '/tnt <spieler>'
+  fire:
+    permission: keks.fire
+    usage: '/fire <spieler> <dauer in sekunden>'
+  freeze:
+    permission: keks.freeze
+    usage: '/freeze <spieler>'
+  starve:
+    permission: keks.starve
+    usage: '/starve <spieler>'
+  nofood:
+    permission: keks.nofood
+    usage: '/nofood <spieler>'

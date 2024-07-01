@@ -1,0 +1,13 @@
+net\lostteku\events\PlayerFoodListener.class
+net\lostteku\commands\fun\FreezeCommand.class
+net\lostteku\commands\fun\StarveCommand.class
+net\lostteku\enums\Messages.class
+net\lostteku\events\PlayerMoveListener.class
+net\lostteku\commands\fun\FireCommand.class
+net\lostteku\commands\fun\SlapCommand.class
+net\lostteku\commands\fun\TntCommand.class
+net\lostteku\commands\fun\NoFoodCommand.class
+net\lostteku\enums\DefaultConf.class
+net\lostteku\utils\ConfigManager.class
+net\lostteku\events\EntityExplodeListener.class
+net\lostteku\Reingekekst.class
