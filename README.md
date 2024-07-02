@@ -10,6 +10,6 @@ Command | Permission | Description
 /fire [player] [duration in seconds] | keks.fire | Ignites the target-player. Will deal damage to him. 
 /stick [id] | keks.stick | Gets the player a stick. IDs: 1 is a fireball-spawning stick, 2 is a monster-spawn-stick and 3 will create explosions! Just left-click one of these and u will see!
 
-Nearly all command-effects on target-players can be cleared when the command is typed again.
+Nearly all command-effects on target-players can be cleared when the command is executed again.
 
 Have fun!
