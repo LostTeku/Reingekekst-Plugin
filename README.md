@@ -10,6 +10,7 @@ Command | Permission | Description
 /tnt [player] | keks.tnt | Spawns a tnt-block over the player. The player will get damage from it, when the player doesn't move quickly.
 /starve [player] | keks.starve | The foodbar of the player will be set to 0. The player has to eat something, otherwise he will suffer damage.
 /fire [player] [duration in seconds] | keks.fire | Ignites the target-player. Will deal damage to him. 
+/stick [id] | keks.stick | Gets the player a stick. IDs: 1 is a fireball-spawning stick, 2 is a monster-spawn-stick and 3 will create explosions! Just left-click one of these and u will see!
 
 Nearly all command-effects on target-players can be cleared when the command is typed again.
 
