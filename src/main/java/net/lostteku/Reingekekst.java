@@ -3,6 +3,7 @@ package net.lostteku;
 import net.lostteku.commands.fun.*;
 import net.lostteku.events.EntityExplodeListener;
 import net.lostteku.events.PlayerFoodListener;
+import net.lostteku.events.PlayerItemListener;
 import net.lostteku.events.PlayerMoveListener;
 import net.lostteku.utils.ConfigManager;
 import org.bukkit.Bukkit;
@@ -24,6 +25,7 @@ public class Reingekekst extends JavaPlugin {
         pm.registerEvents(new EntityExplodeListener(), this);
         pm.registerEvents(new PlayerMoveListener(), this);
         pm.registerEvents(new PlayerFoodListener(), this);
+        pm.registerEvents(new PlayerItemListener(), this);
 
         //getCommand("slap").setExecutor(new SlapCommand());
         getCommand("tnt").setExecutor(new TntCommand());
@@ -31,6 +33,8 @@ public class Reingekekst extends JavaPlugin {
         getCommand("freeze").setExecutor(new FreezeCommand());
         getCommand("starve").setExecutor(new StarveCommand());
         getCommand("nofood").setExecutor(new NoFoodCommand());
+        getCommand("stick").setExecutor(new StickCommand());
+
     }
 
     public static Reingekekst getPlugin() {

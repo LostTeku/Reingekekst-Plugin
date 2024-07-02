@@ -18,3 +18,6 @@ commands:
   nofood:
     permission: keks.nofood
     usage: '/nofood <spieler>'
+  stick:
+    permission: keks.stick
+    usage: '/stick <id>'

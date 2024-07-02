@@ -11,7 +11,8 @@ public enum Messages {
     WRONG_COMMAND_ARGUMENTS("wrongCommandArguments", "&cFalscher Command-Syntax! Benutzung:"),
     NO_PLAYER("noPlayerFound", "&cSpieler nicht gefunden!"),
     OFFLINE_PLAYER("offlinePlayerMessage", "&cDer gesuchte Spieler ist offline!"),
-    ACTION_SUCESS("actionSuccess", "&aAktion erfolgreich ausgeführt!");
+    ACTION_SUCESS("actionSuccess", "&aAktion erfolgreich ausgeführt!"),
+    MAGIC_WAND_GIVEN("gaveMagicWand", "&cDu hast den Zauberstick erhalten!");
 
 
     private String path;
