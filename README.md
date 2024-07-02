@@ -1,8 +1,6 @@
 # Reingekekst-Plugin
  A troll plugin for trolling other players, who could've guessed!
 
- Currently there are only 5 commands that are available.
-
 Command | Permission | Description 
 -------- | -------- | --------
 /nofood [player] | keks.nofood | The player can't fill up his foodbar with any type of food. 
