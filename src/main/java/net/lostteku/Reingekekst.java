@@ -1,11 +1,9 @@
 package net.lostteku;
 
 import net.lostteku.commands.fun.*;
-import net.lostteku.events.EntityExplodeListener;
-import net.lostteku.events.PlayerFoodListener;
-import net.lostteku.events.PlayerItemListener;
-import net.lostteku.events.PlayerMoveListener;
+import net.lostteku.events.*;
 import net.lostteku.utils.ConfigManager;
+import net.lostteku.utils.TrollInventory;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -15,6 +13,7 @@ public class Reingekekst extends JavaPlugin {
     private static Reingekekst plugin;
 
     private ConfigManager configManager = new ConfigManager();
+    private TrollInventory trollInventory = new TrollInventory();
 
     @Override
     public void onEnable() {
@@ -26,6 +25,7 @@ public class Reingekekst extends JavaPlugin {
         pm.registerEvents(new PlayerMoveListener(), this);
         pm.registerEvents(new PlayerFoodListener(), this);
         pm.registerEvents(new PlayerItemListener(), this);
+        pm.registerEvents(new PlayerInventoryListener(), this);
 
         //getCommand("slap").setExecutor(new SlapCommand());
         getCommand("tnt").setExecutor(new TntCommand());
@@ -34,6 +34,9 @@ public class Reingekekst extends JavaPlugin {
         getCommand("starve").setExecutor(new StarveCommand());
         getCommand("nofood").setExecutor(new NoFoodCommand());
         getCommand("stick").setExecutor(new StickCommand());
+        getCommand("troll").setExecutor(new TrollCommand());
+
+        trollInventory.createInventory();
 
     }
 

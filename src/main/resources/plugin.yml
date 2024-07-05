@@ -21,3 +21,6 @@ commands:
   stick:
     permission: keks.stick
     usage: '/stick <id>'
+  troll:
+    permission: keks.troll
+    usage: '/troll'

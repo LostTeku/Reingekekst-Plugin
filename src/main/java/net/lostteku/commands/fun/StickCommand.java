@@ -1,6 +1,7 @@
 package net.lostteku.commands.fun;
 
 import net.lostteku.enums.Messages;
+import net.lostteku.utils.TrollFunctions;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -10,6 +11,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class StickCommand implements CommandExecutor {
+
+    private TrollFunctions trollFunctions = new TrollFunctions();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {

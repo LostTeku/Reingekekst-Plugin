@@ -14,6 +14,8 @@ public class PlayerItemListener implements Listener {
     public void onItem(PlayerInteractEvent event){
         if(!event.getPlayer().hasPermission("keks.stick")) return;
         if(!event.getAction().equals(Action.LEFT_CLICK_AIR)) return;
+        if(event.getItem() == null) return;
+        if(event.getItem().getItemMeta() == null) return;
         if(!event.getItem().getItemMeta().isUnbreakable()) return;
 
         if(event.getItem().getItemMeta().getItemName().equals("fireball_stick")){
