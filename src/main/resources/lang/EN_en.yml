@@ -1,0 +1,6 @@
+noPermissionMessage: '&cNo Permission!'
+wrongCommandArguments: '&cWrong command arguments! Usage:'
+noPlayerFound: '&cPlayer not found!'
+offlinePlayerMessage: '&cSearched player is offline!'
+actionSuccess: '&aAction successfully completed!'
+gaveMagicWand: '&cYou received a magical wand!'

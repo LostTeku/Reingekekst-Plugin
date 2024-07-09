@@ -5,36 +5,22 @@ import org.bukkit.ChatColor;
 
 public enum Messages {
 
-
-    PREFIX("prefix", "&a&l-> &e"),
-    NO_PERMISSION("noPermissionMessage", "&cDu hast keine Berechtigungen, diese Aktion zu tätigen!"),
-    WRONG_COMMAND_ARGUMENTS("wrongCommandArguments", "&cFalscher Command-Syntax! Benutzung:"),
-    NO_PLAYER("noPlayerFound", "&cSpieler nicht gefunden!"),
-    OFFLINE_PLAYER("offlinePlayerMessage", "&cDer gesuchte Spieler ist offline!"),
-    ACTION_SUCESS("actionSuccess", "&aAktion erfolgreich ausgeführt!"),
-    MAGIC_WAND_GIVEN("gaveMagicWand", "&cDu hast den Zauberstick erhalten!");
+    NO_PERMISSION("noPermissionMessage"),
+    WRONG_COMMAND_ARGUMENTS("wrongCommandArguments"),
+    NO_PLAYER("noPlayerFound"),
+    OFFLINE_PLAYER("offlinePlayerMessage"),
+    ACTION_SUCESS("actionSuccess"),
+    MAGIC_WAND_GIVEN("gaveMagicWand");
 
 
     private String path;
-    private String msg;
-    private static ConfigManager manager = new ConfigManager();
 
-
-    Messages(String path, String msg) {
+    Messages(String path) {
         this.path = path;
-        this.msg = msg;
     }
 
-    public String getPath() {
-        return path;
-    }
-
-    public String getStandardMessage() {
-        return msg;
-    }
-
-    public static String getCustomMessage(Messages message) {
-        return ChatColor.translateAlternateColorCodes('&', manager.getConfigFile("messages").getString("prefix") + " " + ChatColor.translateAlternateColorCodes('&', manager.getConfigFile("messages").getString(message.getPath()).replace('\n', '\n')));
+    public static String getPath(Messages msg) {
+        return msg.path;
     }
 }
 

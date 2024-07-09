@@ -1,0 +1,6 @@
+noPermissionMessage: '&cDu hast keine Berechtigungen, diese Aktion zu tätigen!'
+wrongCommandArguments: '&cFalscher Command-Syntax! Benutzung:'
+noPlayerFound: '&cSpieler nicht gefunden!'
+offlinePlayerMessage: '&cDer gesuchte Spieler ist offline!'
+actionSuccess: '&aAktion erfolgreich ausgeführt!'
+gaveMagicWand: '&cDu hast den Zauberstick erhalten!'

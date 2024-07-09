@@ -4,6 +4,7 @@ import net.lostteku.Reingekekst;
 import net.lostteku.enums.DefaultConf;
 import net.lostteku.enums.Messages;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -15,25 +16,50 @@ import java.util.List;
 public class ConfigManager {
 
     private static List<File> fileList = new ArrayList<>();
+    private static String lang = "EN_en";
+
 
     public void loadFiles() {
         if (!Reingekekst.getPlugin().getDataFolder().exists()) {
             Reingekekst.getPlugin().getDataFolder().mkdir();
         }
 
-       /* for (DefaultConf confs : DefaultConf.values()) {
-            setDefaultsToConfig(createNewFile("config"), confs.getPath(), confs.getValue());
-        }*/
-
-        for (Messages msgs : Messages.values()) {
-            setDefaultsToConfig(createNewFile("messages"), msgs.getPath(), msgs.getStandardMessage());
+        File lang = new File(Reingekekst.getPlugin().getDataFolder() + "\\lang\\");
+        if(!lang.exists()){
+            lang.mkdir();
         }
+
+       for (DefaultConf confs : DefaultConf.values()) {
+            setDefaultsToConfig(createNewFile("config"), confs.getPath(), confs.getValue());
+        }
+
+       /* for (Messages msgs : Messages.values()) {
+            setDefaultsToConfig(createNewFile("lang\\EN_en"), msgs.getPath(), msgs.getStandardMessage());
+        }*/
 
         for (File files : Reingekekst.getPlugin().getDataFolder().listFiles()) {
             if (files.getName().endsWith(".yml")) {
                 fileList.add(files);
             }
         }
+
+        switch (getConfigFile("config").getString("language")) {
+            case "DE": case "DE_de":
+                setLang("DE_de");
+                break;
+            case "EN": case "EN_en":
+                setLang("EN_en");
+                break;
+            default:
+                Bukkit.getConsoleSender().sendMessage("§cPlease ensure that the language string in the config.yml is right!");
+                return;
+        }
+
+        File file = new File(Reingekekst.getPlugin().getDataFolder() + "/lang/" +  getLang() + ".yml");
+        if(!file.exists()){
+            Reingekekst.getPlugin().saveResource( "lang/" + getLang() + ".yml", true);
+        }
+
     }
 
     private File createNewFile(String name) {
@@ -84,5 +110,17 @@ public class ConfigManager {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static void setLang(String lang) {
+        ConfigManager.lang = lang;
+    }
+
+    public static String getLang() {
+        return lang;
+    }
+
+    public static String getMessage(Messages path){
+        return ChatColor.translateAlternateColorCodes('&', YamlConfiguration.loadConfiguration(new File(Reingekekst.getPlugin().getDataFolder() + "\\lang\\" + getLang() + ".yml")).getString(Messages.getPath(path)));
     }
 }

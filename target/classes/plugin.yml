@@ -3,21 +3,24 @@ version: 1.0
 api-version: 1.21
 main: net.lostteku.Reingekekst
 commands:
-  slap:
-    permission: op
-    usage: '/slap <spieler>'
   tnt:
-    permission: op
+    permission: keks.tnt
     usage: '/tnt <spieler>'
   fire:
-    permission: op
+    permission: keks.fire
     usage: '/fire <spieler> <dauer in sekunden>'
   freeze:
-    permission: op
+    permission: keks.freeze
     usage: '/freeze <spieler>'
   starve:
-    permission: op
+    permission: keks.starve
     usage: '/starve <spieler>'
   nofood:
-    permission: op
+    permission: keks.nofood
     usage: '/nofood <spieler>'
+  stick:
+    permission: keks.stick
+    usage: '/stick <id>'
+  troll:
+    permission: keks.troll
+    usage: '/troll'

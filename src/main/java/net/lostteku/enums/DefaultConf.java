@@ -4,7 +4,10 @@ import net.lostteku.utils.ConfigManager;
 import org.bukkit.ChatColor;
 
 public enum DefaultConf {
-    ;
+
+    PREFIX("prefix", "&a&l-> &e"),
+    LANGUAGE("language", "EN");
+
     private String path;
     private String value;
     private static ConfigManager manager = new ConfigManager();

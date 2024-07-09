@@ -8,6 +8,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.net.MalformedURLException;
+
 public class Reingekekst extends JavaPlugin {
 
     private static Reingekekst plugin;
@@ -19,6 +21,7 @@ public class Reingekekst extends JavaPlugin {
     public void onEnable() {
         plugin = this;
         configManager.loadFiles();
+
 
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new EntityExplodeListener(), this);

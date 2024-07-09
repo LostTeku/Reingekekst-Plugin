@@ -1,6 +1,7 @@
 package net.lostteku.commands.fun;
 
 import net.lostteku.enums.Messages;
+import net.lostteku.utils.ConfigManager;
 import net.lostteku.utils.TrollFunctions;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -19,12 +20,12 @@ public class StickCommand implements CommandExecutor {
         if(!(sender instanceof Player)) return false;
 
         if(!(sender.hasPermission("keks.*") || sender.hasPermission("keks.stick"))){
-            sender.sendMessage(Messages.getCustomMessage(Messages.NO_PERMISSION));
+            sender.sendMessage(ConfigManager.getMessage(Messages.NO_PERMISSION));
             return false;
         }
 
         if(args.length != 1){
-            sender.sendMessage(Messages.getCustomMessage(Messages.WRONG_COMMAND_ARGUMENTS) + "\n" + "Stick-Arten: \n1: Feuerbälle\n2:Monsterspawn\n3:Explosions\n/stick <id>");
+            sender.sendMessage(ConfigManager.getMessage(Messages.WRONG_COMMAND_ARGUMENTS) + "\n" + "Stick-Arten: \n1: Feuerbälle\n2:Monsterspawn\n3:Explosions\n/stick <id>");
             return true;
         }
 
@@ -40,10 +41,10 @@ public class StickCommand implements CommandExecutor {
               stack.setItemMeta(meta);
 
               ((Player) sender).getInventory().addItem(stack);
-              sender.sendMessage(Messages.getCustomMessage(Messages.MAGIC_WAND_GIVEN));
+              sender.sendMessage(ConfigManager.getMessage(Messages.MAGIC_WAND_GIVEN));
               return true;
           default:
-              sender.sendMessage(Messages.getCustomMessage(Messages.WRONG_COMMAND_ARGUMENTS) + "\n" + "Stick-Arten: \n1: Fireballs\n2:Monsterspawn\n3:Explosions\n/stick <id>");
+              sender.sendMessage(ConfigManager.getMessage(Messages.WRONG_COMMAND_ARGUMENTS) + "\n" + "Stick-Arten: \n1: Fireballs\n2:Monsterspawn\n3:Explosions\n/stick <id>");
               return true;
 
       }

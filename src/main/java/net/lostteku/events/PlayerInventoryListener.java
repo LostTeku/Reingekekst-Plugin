@@ -1,6 +1,7 @@
 package net.lostteku.events;
 
 import net.lostteku.enums.Messages;
+import net.lostteku.utils.ConfigManager;
 import net.lostteku.utils.TrollFunctions;
 import net.lostteku.utils.TrollInventory;
 import org.bukkit.Bukkit;
@@ -75,7 +76,7 @@ public class PlayerInventoryListener implements Listener {
                         }
                     }
                     event.getView().close();
-                    ((Player) event.getWhoClicked()).getPlayer().sendMessage(Messages.getCustomMessage(Messages.ACTION_SUCESS));
+                    ((Player) event.getWhoClicked()).getPlayer().sendMessage(ConfigManager.getMessage(Messages.ACTION_SUCESS));
                     trollplayers.remove(((Player) event.getWhoClicked()).getPlayer());
                     return;
                 }
